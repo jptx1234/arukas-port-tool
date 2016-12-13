@@ -8,7 +8,10 @@
 
 
 用法：./update_arukas_port.sh Token:Secret  Arukas_Endpoint Arukas_Port Local_Port
+
 如：./update_arukas_port.sh 123456-1234-123456789876:abcdefghijklmnopqrst myendpoint.arukascloud.io 8388 1024
+
+
 Token和Secret通过 https://app.arukas.io/settings/api-keys 获取。注意：使用时Token和Secret使用冒号连起来。
 Arukas_Endpoint 是目标容器的 Endpoint ，可以通过此 Endpoint 来标识目标容器。
 Arukas_Port 是目标容器的自定义端口，此端口是创建 docker 时自己填的那个，比如22和8388和80什么的。
