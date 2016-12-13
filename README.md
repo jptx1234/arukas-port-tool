@@ -12,3 +12,5 @@ Arukas_Endpoint 是目标容器的 Endpoint ，可以通过此 Endpoint 来标�
 Arukas_Port 是目标容器的自定义端口，此端口是创建 docker 时自己填的那个，比如22和8388和80什么的。
 Local_Port 是开在本地的端口。
 没写死循环，如果要实现“每隔多少小时自动更新端口信息”类似的功能，请自行写循环或者用定时任务什么的来调用此脚本。
+
+之所以使用curl -u user:pass 选项而不用 .netrc 文件，是因为 CentOS 7 内置的低版本的 curl 有 bug ，发送认证信息时会丢一位密码，除非更新到新版本的 curl ，否则还是使用 -u 比较稳妥。
