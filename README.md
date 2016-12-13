@@ -2,7 +2,9 @@
 获取 Arukas Docker 的容器的映射端口，并把本机的某端口转发到此端口。
    因为端口转发功能使用的是 firewall-cmd 应该仅适用于CentOS 7.
    不知道 CentOS 6 能不能用 firewalld ，我对 iptables 不太熟悉，如果有对 iptables 熟悉的，可以把脚本最后的几条 firewall-cmd 命令改成 iptables 的命令，这样就能适配 CentOS 6 了 。
-依赖命令：curl  jq  host firewall-cmd 
+
+
+依赖命令：curl(调用 Arukas 的 API)  jq(处理 json 数据)  host(把域名解析为 IP) firewall-cmd(实现端口转发) 
 
 
 用法：./update_arukas_port Token:Secret  Arukas_Endpoint Arukas_Port Local_Port
